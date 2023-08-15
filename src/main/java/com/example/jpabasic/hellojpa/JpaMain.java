@@ -1,13 +1,12 @@
 package com.example.jpabasic.hellojpa;
 
+import com.example.jpabasic.hellojpa.domain.oneline.Member2;
+import com.example.jpabasic.hellojpa.domain.oneline.Team;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
-import java.util.Date;
-import java.util.List;
 
 
 public class JpaMain {
@@ -19,13 +18,31 @@ public class JpaMain {
         tx.begin();
 
         try {
-           //비영속
-            Member member1 = new Member(121L, "jisu", 11, RoleType.USER, LocalDateTime.now(), LocalDateTime.now(),"test1");
+            Team team = new Team();
+            team.setName("team1");
+            em.persist(team);
 
-            em.persist(member1);
+            Member2 member2 = new Member2();
+            member2.setUsername("member2");
+            member2.setTeam(team);
+            em.persist(member2);
+
+            em.flush();
+            em.clear();
+
+            Member2 member21 = em.find(Member2.class, member2.getId());
+            System.out.println(member21.getTeam().getName());
+
+            Team team1 = em.find(Team.class, team.getId());
+            System.out.println("==============");
+//            for(Member2 m : team1.getMembers()){
+//                System.out.println("m = " + m.getUsername());
+//            }
+            team1.getMembers().stream()
+                    .map(i->"m = " + i.getUsername())
+                    .forEach(System.out::println);
 
 
-            tx.commit();
         } catch (Exception e) {
             tx.rollback();
         }finally {
