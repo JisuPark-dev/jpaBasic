@@ -4,22 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97e20a0e-ce1b-41e7-a607-a4e16402e312" name="Changes" comment="FEAT : @Column, @Id 실습">
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ex1-hello-jpa.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/domain/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/domain/Member.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/domain/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/domain/OrderItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/domain/OrderStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/domain/oneline/Member2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/domain/oneline/Team.java" afterDir="false" />
+    <list default="true" id="97e20a0e-ce1b-41e7-a607-a4e16402e312" name="Changes" comment="FEAT : 연관관계 매핑 실습2&#10;&#10;@OneToMany(mappedBy = &quot;team&quot;)&#10;@ManyToOne&#10;@JoinColumn(name = &quot;team_id&quot;)&#10;일대 다 관계에서의 외래키는 다 쪽에 있다.&#10;연관관계의 주인은 외래키를 가지고 있는 쪽이다.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/Album.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/Movie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/JpaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/JpaMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/Member.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/domain/Item.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/domain/Member.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/domain/Order.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/domain/OrderItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/domain/OrderStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/domain/oneline/Member2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/jpabasic/hellojpa/domain/oneline/Team.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,25 +47,25 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/sudong/Desktop/김영한SpringMVC/jpaBasic/src/main/java/com/example/jpabasic/hellojpa/domain/toline",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/sudong/Desktop/김영한SpringMVC/jpaBasic/src/main/java/com/example/jpabasic/hellojpa/domain/toline&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.jpabasic.hellojpa.domain" />
@@ -128,7 +127,11 @@
       <workItem from="1691929574251" duration="1251000" />
       <workItem from="1691982322549" duration="2555000" />
       <workItem from="1691995950452" duration="1467000" />
-      <workItem from="1692067441231" duration="8039000" />
+      <workItem from="1692067441231" duration="11488000" />
+      <workItem from="1692131171878" duration="2197000" />
+      <workItem from="1692137152275" duration="2707000" />
+      <workItem from="1692239891085" duration="749000" />
+      <workItem from="1692451386895" duration="1636000" />
     </task>
     <task id="LOCAL-00001" summary="FEAT : jpa 기본 문법 실습 진행">
       <created>1691997487354</created>
@@ -144,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692077897664</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="FEAT : 연관관계 실습&#10;&#10;@OneToMany(mappedBy = &quot;team&quot;)&#10;@ManyToOne&#10;@JoinColumn(name = &quot;team_id&quot;)&#10;일대 다 관계에서의 외래키는 다 쪽에 있다.&#10;연관관계의 주인은 외래키를 가지고 있는 쪽이다.">
+      <created>1692085716974</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1692085716974</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,7 +163,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="FEAT : jpa 기본 문법 실습 진행" />
     <MESSAGE value="FEAT : @Column, @Id 실습" />
-    <option name="LAST_COMMIT_MESSAGE" value="FEAT : @Column, @Id 실습" />
+    <MESSAGE value="FEAT : 연관관계 실습&#10;&#10;@OneToMany(mappedBy = &quot;team&quot;)&#10;@ManyToOne&#10;@JoinColumn(name = &quot;team_id&quot;)&#10;일대 다 관계에서의 외래키는 다 쪽에 있다.&#10;연관관계의 주인은 외래키를 가지고 있는 쪽이다." />
+    <option name="LAST_COMMIT_MESSAGE" value="FEAT : 연관관계 실습&#10;&#10;@OneToMany(mappedBy = &quot;team&quot;)&#10;@ManyToOne&#10;@JoinColumn(name = &quot;team_id&quot;)&#10;일대 다 관계에서의 외래키는 다 쪽에 있다.&#10;연관관계의 주인은 외래키를 가지고 있는 쪽이다." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
