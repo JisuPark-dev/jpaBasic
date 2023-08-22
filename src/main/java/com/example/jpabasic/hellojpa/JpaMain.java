@@ -1,7 +1,5 @@
 package com.example.jpabasic.hellojpa;
 
-
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
@@ -17,14 +15,24 @@ public class JpaMain {
         tx.begin();
 
         try {
-            Movie movie = new Movie();
-            movie.setDirector("aa");
-            movie.setActor("bbb");
-            movie.setName("바람과함께 사라지다");
-            movie.setPrice(1000);
 
-            em.persist(movie);
+            Member member = new Member();
+            member.setName("hello");
 
+            em.persist(member);
+
+            em.flush();
+            em.clear();
+
+            //
+//            Member findMember = em.find(Member.class, member.getId());
+//            System.out.println("findMember = " + findMember.getId());
+//            System.out.println("findMember = " + findMember.getName());
+
+            Member findMember = em.getReference(Member.class, member.getId());
+            System.out.println("findMember = " + findMember.getClass());
+            System.out.println("findMember = " + findMember.getId());
+//            System.out.println("findMember.getName() = " + findMember.getName());
             tx.commit();
         } catch (Exception e) {
             tx.rollback();
